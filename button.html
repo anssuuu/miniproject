@@ -1,137 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Questoria</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #1a1a1a;
-      color: white;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Adventure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* Navbar styling */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background-color: #000000;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+        body, html {
+            height: 100%;
+            font-family: 'Press Start 2P', cursive;
+            background-image: url('https://raw.githubusercontent.com/anssuuu/miniproject/main/0z4BwX1V8jSb5i87NRJgR.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .navbar img {
-      width: 50px; /* Adjust logo size */
-      height: 50px;
-    }
+        /* Light blue tint overlay */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(173, 216, 230, 0.5); /* Light blue with some transparency */
+            z-index: 1;
+        }
 
-    .navbar-title {
-      font-size: 18px;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: #8758b6;
-    }
+        /* Content Styling */
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+        }
 
-    .navbar-title:after {
-      content: "";
-      display: block;
-      margin: 4px auto;
-      width: 50%;
-      height: 2px;
-      background-color: #8758b6; /* Highlight color */
-    }
+        /* Main Heading Style with Dark Green and Red Gradient */
+        h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 3rem;
+            text-align: center;
+            background-image: linear-gradient(to left, #262074, #2d4e1d); /* Dark green to red gradient */
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
 
-    .navbar-buttons button {
-      background: none;
-      border: 2px solid #8758b6;
-      color: #8758b6;
-      padding: 10px 20px;
-      text-transform: uppercase;
-      font-weight: bold;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
+        /* Button Styling */
+        .button {
+            padding: 30px 30px;
+            margin: 20px;
+            font-size: 1.5rem;
+            color: white;
+            background-color: #f39c12;
+            border: 5px solid #e67e22;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
 
-    .navbar-buttons button:hover {
-      background-color: #8758b6;
-      color: black;
-    }
+        .button:hover {
+            background-color: #d35400;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+        }
 
-    /* Hero Section */
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 90vh;
-  background-color: #6c2c82;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.hero:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(164, 64, 192, 0.5); /* Faded purple overlay */
-  z-index: 1;
-}
-
-    .hero img {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 50px; /* Placeholder for left-side icon */
-      z-index: 3;
-    }
-
-    .hero .content {
-      z-index: 2;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      color: white;
-      margin: 20px 0;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: #ddd;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-  </style>
+        .button:active {
+            transform: scale(0.95);
+        }
+    </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <div class="navbar">
-    <!-- Logo -->
-    <img src="https://raw.githubusercontent.com/anssuuu/miniproject/main/bYXg0VOCOdnn--x9iXtck.png" alt="Logo">
-    <div class="navbar-title">Questoria</div>
-    <div class="navbar-buttons">
-      <button>Start Quiz</button>
-    </div>
-  </div>
 
-  <!-- Hero Section -->
-  <div class="hero" style="background-image: url('https://raw.githubusercontent.com/anssuuu/miniproject/main/mwDSzRKiDSCkzvkr4ZxTO.png');">
     <div class="content">
-      <h1>Questoria: Level Up Your Quiz Experience</h1>
-      <p>Power up your learning with our engaging quiz challenges.</p>
+        <h1>Ready to break blocks and score high? Let the quiz adventure begin!</h1>
+        
+        <button class="button" onclick="window.location.href='https://example.com/start-join-quiz'">
+            START OR JOIN A QUIZ
+        </button>
+        <button class="button" onclick="window.location.href='https://example.com/practice-quiz'">
+            PRACTICE QUIZ
+        </button>
     </div>
-  </div>
 </body>
 </html>
-
